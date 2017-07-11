@@ -52,7 +52,7 @@
         int h = (int)CGImageGetHeight(image.CGImage);
         unsigned char *bitmap = [ImagePixelConverter convertImageToBitmap:image];
 
-        vColors = mask((int *)bitmap, rects, w ,h);
+        vColors = mask(bitmap, rects, w ,h);
         free(bitmap);
     } @catch (NSException *exception) {
         NSLog(@"exception,%@",exception);

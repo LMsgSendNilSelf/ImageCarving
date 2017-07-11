@@ -10,7 +10,7 @@
 
 @implementation ImagePixelConverter
 
-+ (unsigned char *) convertImageToBitmap:(UIImage *) image {
++ (unsigned char *)convertImageToBitmap:(UIImage *) image {
 	CGImageRef imageRef = image.CGImage;
 	
 	// Create a bitmap context to draw the uiimage into
@@ -54,7 +54,7 @@
 	return newBitmap;	
 }
 
-+ (CGContextRef) newBitmapContextFromImage:(CGImageRef) image {
++ (CGContextRef)newBitmapContextFromImage:(CGImageRef) image {
 	CGContextRef context = NULL;
 	CGColorSpaceRef colorSpace;
 	uint32_t *bitmapData;

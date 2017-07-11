@@ -8,6 +8,6 @@
 #include <string>
 #include "model.h"
 
-std::vector<RGB> mask(unsigned char* buf, std::vector<CRECT> curveRect, float w, float h);
+std::vector<RGB> mask(unsigned char* buf, std::vector<CRECT> curveRect, int w, int h);
 
 #endif //CURVED_COLOR_H

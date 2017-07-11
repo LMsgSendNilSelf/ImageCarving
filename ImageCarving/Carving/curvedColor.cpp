@@ -15,11 +15,11 @@
 using namespace std;
 using namespace cv;
 
-vector<RGB> mask(int *cbuf, vector<CRect> curvedRect, int w, int h){
+vector<RGB> mask(unsigned char *cbuf, vector<CRect> curvedRect, int w, int h){
     int size = w*h;
     vector<RGB> rgbs;
     
-    Mat imgData(h, w, CV_8UC4, (unsigned char *) cbuf);
+    Mat imgData(h, w, CV_8UC4, cbuf);
     Mat destImg;
     cvtColor(imgData, destImg, CV_BGRA2GRAY);
     
